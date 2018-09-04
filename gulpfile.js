@@ -31,7 +31,7 @@ gulp.task('copyJs',function() {
 });
 
 gulp.task('sass',function() {
-  return gulp.src(['assets/sass/*.scss'])
+  return gulp.src(['assets/scss/*.scss'])
   .pipe(plumber())
   .pipe(sass({outputStyle: 'compressed'}))
   .pipe(gulp.dest('html/css/'))
@@ -40,7 +40,6 @@ gulp.task('sass',function() {
 
 gulp.task('default',['delHtml','delJs','delSass','copyHtml','copyJs','sass'], function() {
   browserSync.init({
-    // port: 8000,
     server: {
       baseDir: 'html'
     }
