@@ -1,6 +1,7 @@
 # Dependency directories
 node_modules/
-
+*.psd
+*.tiff
 # WordPress.gitignore
 *.log
 wp-config.php
